@@ -35,3 +35,5 @@ The app will be responsive.
 * User wants to switch between a light and a dark theme to view content best depending on day time
 * User wants to see a spinner when data needs time to know to wait for the changes
 * User wants to filter a list with a search value to only see valuable items
+* User wants to see content in google search results to faster find what they are searching
+* User wants to ge notified when something happens to be best informed
