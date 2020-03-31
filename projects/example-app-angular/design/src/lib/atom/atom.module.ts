@@ -5,10 +5,13 @@ import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
-    IconComponent
+    IconComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports: [
+    IconComponent,
   ]
 })
 export class AtomModule { }
