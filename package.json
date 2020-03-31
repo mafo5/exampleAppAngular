@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build:design": "ng build @example-app-angular/design",
+    "build": "npm run build:design && ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "npm run build:design && ng deploy --base-href=/exampleAppAngular/"
   },
   "private": true,
   "dependencies": {
