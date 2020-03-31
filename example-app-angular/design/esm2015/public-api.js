@@ -1,9 +1,0 @@
-/*
- * Public API Surface of design
- */
-export * from './lib/token';
-export * from './lib/atom';
-export * from './lib/molecule';
-export * from './lib/organism';
-export * from './lib/design.module';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BleGFtcGxlLWFwcC1hbmd1bGFyL2Rlc2lnbi8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLGFBQWEsQ0FBQztBQUM1QixjQUFjLFlBQVksQ0FBQztBQUMzQixjQUFjLGdCQUFnQixDQUFDO0FBQy9CLGNBQWMsZ0JBQWdCLENBQUM7QUFFL0IsY0FBYyxxQkFBcUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgZGVzaWduXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvdG9rZW4nO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvYXRvbSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9tb2xlY3VsZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9vcmdhbmlzbSc7XG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2Rlc2lnbi5tb2R1bGUnO1xuIl19
