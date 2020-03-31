@@ -1,0 +1,21 @@
+{
+  "name": "@example-app-angular/design",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/example-app-angular-design.umd.js",
+  "module": "fesm5/example-app-angular-design.js",
+  "es2015": "fesm2015/example-app-angular-design.js",
+  "esm5": "esm5/example-app-angular-design.js",
+  "esm2015": "esm2015/example-app-angular-design.js",
+  "fesm5": "fesm5/example-app-angular-design.js",
+  "fesm2015": "fesm2015/example-app-angular-design.js",
+  "typings": "example-app-angular-design.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
+}
