@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@example-app-angular/design": [
+        "dist/example-app-angular/design/example-app-angular-design",
+        "dist/example-app-angular/design"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
