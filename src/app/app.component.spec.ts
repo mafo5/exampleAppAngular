@@ -3,6 +3,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 import * as __ from 'hamjest';
 
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({ template: 'TEST CONTENT' })
+class TestComponent {}
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -12,10 +17,13 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule.withRoutes([
+          { path: '', component: TestComponent },
+        ])
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        TestComponent,
       ],
     }).compileComponents();
 
@@ -23,6 +31,10 @@ describe('AppComponent', () => {
     component = fixture.debugElement.componentInstance;
     compiled = fixture.debugElement.nativeElement;
 
+    const router = TestBed.inject(Router);
+    fixture.ngZone.run(() => {
+      router.initialNavigation();
+    });
     fixture.detectChanges();
   }));
 
@@ -36,8 +48,8 @@ describe('AppComponent', () => {
     __.assertThat(component, __.hasProperty('title', __.is('exampleApp')));
   });
 
-  it('should render title', () => {
+  it('should render routing content', () => {
 
-    __.assertThat(compiled.querySelector('.content span'), __.hasProperty('textContent', __.containsString('exampleApp app is running!')));
+    __.assertThat(compiled, __.hasProperty('textContent', __.is('TEST CONTENT')));
   });
 });
