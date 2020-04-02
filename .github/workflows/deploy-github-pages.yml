@@ -1,8 +1,7 @@
 name: NodeJS Continuous Integration Deploy to GitHub Pages
 
 on:
-  push:
-    : [ master ]
+  push: [ master ]
 
 jobs:
   build-and-deploy:
