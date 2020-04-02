@@ -1,7 +1,10 @@
 name: CI Deploy
 
 on:
-  push: [ master ]
+  push:
+    tags:
+      - '*'
+
 
 jobs:
   build-and-deploy:
