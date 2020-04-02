@@ -24,4 +24,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npm install
-        npm run deploy --no-silent
+        npm run deploy -- --no-silent  --name $GITHUB_ACTOR --email $GITHUB_ACTOR@users.noreply.github.com
