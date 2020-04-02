@@ -24,22 +24,24 @@ The app will be responsive.
 
 ## requirements
 
-* User wants to see a list of items to get an overview
-* User wants to see the details when clicked on an item to get all information of one item
-* User wants to get the top of an item details when changed the details to start at the beginning
-* User wants to see icons to fastly recognize certain content
-* User wants to create an item to add more content
-* User wants to update an item to correct false content
-* User wants to delete an item to remove unused content
-* User wants to see certain content as a modal overlay to not be distracted by other features
-* User wants to drop a file to upload it
-* User wants to drag and drop an item to change sorting
-* User wants to see a list of items in a table to quickly compare different item properties of each item
-* User wants to see the app content on small devices with maximal width of 600 Pixel to view content on the go
-* User wants to see the app content on medium devices with maximal width of 1200 Pixel to view content relaxed on a couch
-* User wants to see the app content on large devices with no maximal width to view content at work
-* User wants to switch between a light and a dark theme to view content best depending on day time
-* User wants to see a spinner when data needs time to know to wait for the changes
-* User wants to filter a list with a search value to only see valuable items
-* User wants to see content in google search results to faster find what they are searching
-* User wants to ge notified when something happens to be best informed
+(❌ = WIP, ✅ = Done)
+
+* ❌ User wants to see a list of items to get an overview
+* ❌ User wants to see the details when clicked on an item to get all information of one item
+* ❌ User wants to get the top of an item details when changed the details to start at the beginning
+* ❌ User wants to see icons to fastly recognize certain content
+* ❌ User wants to create an item to add more content
+* ❌ User wants to update an item to correct false content
+* ❌ User wants to delete an item to remove unused content
+* ❌ User wants to see certain content as a modal overlay to not be distracted by other features
+* ❌ User wants to drop a file to upload it
+* ❌ User wants to drag and drop an item to change sorting
+* ❌ User wants to see a list of items in a table to quickly compare different item properties of each item
+* ❌ User wants to see the app content on small devices with maximal width of 600 Pixel to view content on the go
+* ❌ User wants to see the app content on medium devices with maximal width of 1200 Pixel to view content relaxed on a couch
+* ❌ User wants to see the app content on large devices with no maximal width to view content at work
+* ❌ User wants to switch between a light and a dark theme to view content best depending on day time
+* ❌ User wants to see a spinner when data needs time to know to wait for the changes
+* ❌ User wants to filter a list with a search value to only see valuable items
+* ❌ User wants to see content in google search results to faster find what they are searching
+* ❌ User wants to get notified when something happens to be best informed
