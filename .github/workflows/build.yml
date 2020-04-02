@@ -1,4 +1,4 @@
-name: NodeJS Continuous Integration
+name: NodeJS Continuous Integration Build
 
 on: [push]
 
@@ -18,11 +18,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install and build
       run: |
         npm ci
-        npm run build --if-present
-        npm test
-        npm run lint
+        npm run build
       env:
         CI: true

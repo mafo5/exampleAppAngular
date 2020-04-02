@@ -1,5 +1,11 @@
 # ExampleAppAngular
 
+![CI Install](https://github.com/mafo5/exampleAppAngular/workflows/NodeJS%20Continuous%20Integration%20Install/badge.svg)
+![CI Build](https://github.com/mafo5/exampleAppAngular/workflows/NodeJS%20Continuous%20Integration%20Build/badge.svg)
+![CI Test](https://github.com/mafo5/exampleAppAngular/workflows/NodeJS%20Continuous%20Integration%20Test/badge.svg)
+![CI Lint](https://github.com/mafo5/exampleAppAngular/workflows/NodeJS%20Continuous%20Integration%20Lint/badge.svg)
+![CI Deploy](https://github.com/mafo5/exampleAppAngular/workflows/NodeJS%20Continuous%20Integration%20Deploy%20to%20GitHub%20Pages/badge.svg?branch=master)
+
 ## TLDR;
 Example Vanilla Angular App with Tests for [Common Product Requirements](#requirements) to copy and use in any project.
 
