@@ -4,7 +4,7 @@
 [![CI Build](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Build/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Build")
 [![CI Test](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Test/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Test")
 [![CI Lint](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Lint/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Lint")
-[![CI Deploy](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Deploy%20to%20GitHub%20Pages/badge.svg?branch=master)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Deploy")
+[![CI Deploy](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Deploy/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Deploy")
 
 ## TLDR;
 Example Vanilla Angular App with Tests for [Common Product Requirements](#requirements) to copy and use in any project.
