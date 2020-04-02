@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build:design": "ng build @example-app-angular/design",
     "build": "npm run build:design && ng build",
-    "test": "ng test",
+    "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "npm run build:design && ng deploy --base-href=/exampleAppAngular/"
