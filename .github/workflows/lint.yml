@@ -1,4 +1,4 @@
-name: NodeJS Continuous Integration Lint
+name: CI Lint
 
 on: [push]
 
