@@ -1,0 +1,25 @@
+:host {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 3rem auto 3rem;
+  height: 100%;
+  background-color: rgb(75,75,75);
+  color: white;
+}
+
+header, footer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+main {
+  margin: 0.3rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: rgb(47,47,47);
+}
+
+h1 {
+  font-weight: 700;
+}

@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: PageComponent, children: [
+    { path: '', component: LandingPageComponent },
+  ] },
 ];
 
 @NgModule({

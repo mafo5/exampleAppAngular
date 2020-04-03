@@ -5,11 +5,13 @@ import { DesignModule } from '@example-app-angular/design';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { PageComponent } from './page/page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

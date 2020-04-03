@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import * as __ from 'hamjest';
 
-import { AppComponent } from './app.component';
+import { PageComponent } from './page.component';
+import { Router } from '@angular/router';
 
 @Component({ template: 'TEST CONTENT' })
 class TestComponent {}
 
-describe('AppComponent', () => {
-  let fixture: ComponentFixture<AppComponent>;
-  let component: AppComponent;
+describe('PageComponent', () => {
+  let fixture: ComponentFixture<PageComponent>;
+  let component: PageComponent;
   let compiled: HTMLElement;
 
   beforeEach(async(() => {
@@ -22,12 +22,12 @@ describe('AppComponent', () => {
         ])
       ],
       declarations: [
-        AppComponent,
+        PageComponent,
         TestComponent,
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(PageComponent);
     component = fixture.debugElement.componentInstance;
     compiled = fixture.debugElement.nativeElement;
 
@@ -43,13 +43,18 @@ describe('AppComponent', () => {
     __.assertThat(component, __.is(__.truthy()));
   });
 
-  it(`should have as title 'exampleApp'`, () => {
-
-    __.assertThat(component, __.hasProperty('title', __.is('exampleApp')));
-  });
-
   it('should render routing content', () => {
 
-    __.assertThat(compiled, __.hasProperty('textContent', __.is('TEST CONTENT')));
+    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('TEST CONTENT')));
+  });
+
+  it('should render header', () => {
+
+    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('HEADER')));
+  });
+
+  it('should render footer', () => {
+
+    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('FOOTER')));
   });
 });
