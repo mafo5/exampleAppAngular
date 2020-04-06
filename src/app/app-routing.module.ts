@@ -6,7 +6,14 @@ import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
   { path: '', component: PageComponent, children: [
-    { path: '', component: LandingPageComponent },
+    { path: 'sessions', component: LandingPageComponent },
+    { path: 'challenges', component: LandingPageComponent },
+    { path: 'directory', component: LandingPageComponent },
+    { path: 'resources', component: LandingPageComponent },
+    { path: 'faqs', component: LandingPageComponent },
+    { path: 'account', component: LandingPageComponent },
+    { path: 'logout', component: LandingPageComponent },
+    { path: '**', redirectTo: 'sessions' }
   ] },
 ];
 
