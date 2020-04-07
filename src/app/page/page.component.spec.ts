@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 @Component({ template: 'TEST CONTENT' })
 class TestComponent {}
 
+@Component({
+  selector: 'app-navigation',
+  template: 'TEST_NAVIGATION'
+})
+class TestNavigationComponent {}
+
 describe('PageComponent', () => {
   let fixture: ComponentFixture<PageComponent>;
   let component: PageComponent;
@@ -24,6 +30,7 @@ describe('PageComponent', () => {
       declarations: [
         PageComponent,
         TestComponent,
+        TestNavigationComponent,
       ],
     }).compileComponents();
 
@@ -48,13 +55,13 @@ describe('PageComponent', () => {
     __.assertThat(compiled, __.hasProperty('textContent', __.containsString('TEST CONTENT')));
   });
 
-  it('should render header', () => {
+  it('should render navigation', () => {
 
-    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('HEADER')));
+    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('TEST_NAVIGATION')));
   });
 
-  it('should render footer', () => {
+  it('should render main content', () => {
 
-    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('FOOTER')));
+    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('Main Content')));
   });
 });

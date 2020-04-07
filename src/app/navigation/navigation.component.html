@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <ng-container *ngFor="let navigation of navigationList">
+      <li [routerLink]="navigation.path" routerLinkActive="active">
+        <design-icon size="20" [name]="navigation.icon" *ngIf="navigation.icon"></design-icon>
+        {{navigation.label}}
+      </li>
+    </ng-container>
+  </ul>
+</nav>
