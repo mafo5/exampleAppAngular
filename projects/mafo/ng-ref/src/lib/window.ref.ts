@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class WindowRef {
@@ -17,11 +17,15 @@ export class WindowRef {
   getGlobalObject(name: string): Observable<any> {
     const windowObject = this.getWindow();
     const value = windowObject[name];
-    const output = new BehaviorSubject<any>(value);
+    let output = new Subject<any>();
+    if (value !== undefined) {
+      output = new BehaviorSubject<any>(value);
+    }
     Object.defineProperty(windowObject, name, {
-        set: (settedValue) => {
-            output.next(settedValue);
-        }
+      configurable: true,
+      set: (settedValue) => {
+          output.next(settedValue);
+      }
     });
     return output;
   }
