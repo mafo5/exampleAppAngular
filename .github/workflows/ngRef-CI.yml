@@ -22,7 +22,7 @@ jobs:
       run: |
         npm ci
         npm run lint:ref
-        npm run test:ref
+        npm run test:ref:ci
         npm run build:ref
       env:
         CI: true

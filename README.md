@@ -1,10 +1,9 @@
 # ExampleAppAngular
 
-[![CI Install](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Install/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Install")
-[![CI Build](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Build/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Build")
-[![CI Test](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Test/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Test")
-[![CI Lint](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Lint/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Lint")
-[![CI Deploy](https://github.com/mafo5/exampleAppAngular/workflows/CI%20Deploy/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI+Deploy")
+[![CI](https://github.com/mafo5/exampleAppAngular/workflows/CI/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"CI")
+[![Deploy GithubPages](https://github.com/mafo5/exampleAppAngular/workflows/Deploy%20GithubPages/badge.svg)](https://github.com/mafo5/exampleAppAngular/actions?query=workflow%3A"Deploy+GithubPages")
+
+![@mafo5/ng-ref CI](https://github.com/mafo5/exampleAppAngular/workflows/@mafo5/ng-ref%20CI/badge.svg)
 
 ## TLDR;
 Example Vanilla Angular App with Tests for [Common Product Requirements](#requirements) to copy and use in any project.
