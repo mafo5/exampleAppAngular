@@ -1,5 +1,5 @@
 {
-  "name": "@mafo/ng-ref",
+  "name": "@mafo5/ng-ref",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^9.1.1",

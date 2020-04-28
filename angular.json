@@ -168,38 +168,38 @@
         }
       }
     },
-    "@mafo/ng-ref": {
+    "@mafo5/ng-ref": {
       "projectType": "library",
-      "root": "projects/mafo/ng-ref",
-      "sourceRoot": "projects/mafo/ng-ref/src",
+      "root": "projects/mafo5/ng-ref",
+      "sourceRoot": "projects/mafo5/ng-ref/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/mafo/ng-ref/tsconfig.lib.json",
-            "project": "projects/mafo/ng-ref/ng-package.json"
+            "tsConfig": "projects/mafo5/ng-ref/tsconfig.lib.json",
+            "project": "projects/mafo5/ng-ref/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/mafo/ng-ref/tsconfig.lib.prod.json"
+              "tsConfig": "projects/mafo5/ng-ref/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/mafo/ng-ref/src/test.ts",
-            "tsConfig": "projects/mafo/ng-ref/tsconfig.spec.json",
-            "karmaConfig": "projects/mafo/ng-ref/karma.conf.js"
+            "main": "projects/mafo5/ng-ref/src/test.ts",
+            "tsConfig": "projects/mafo5/ng-ref/tsconfig.spec.json",
+            "karmaConfig": "projects/mafo5/ng-ref/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/mafo/ng-ref/tsconfig.lib.json",
-              "projects/mafo/ng-ref/tsconfig.spec.json"
+              "projects/mafo5/ng-ref/tsconfig.lib.json",
+              "projects/mafo5/ng-ref/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
