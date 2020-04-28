@@ -6,6 +6,7 @@
     "start": "ng serve",
     "lint": "ng lint",
     "test": "ng test --watch=false",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "build": "npm run build:design && ng build",
     "build:design": "ng build @example-app-angular/design",
     "lint:ref": "ng lint @mafo5/ng-ref",
