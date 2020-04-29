@@ -8,14 +8,18 @@
     "test": "ng test --watch=false",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "build": "npm run build:design && ng build",
-    "build:design": "ng build @example-app-angular/design",
+    "lint:design": "ng lint @mafo5/ng-design",
+    "test:design": "ng test @mafo5/ng-design --watch=false",
+    "test:design:ci": "ng test @mafo5/ng-design --watch=false --browsers=ChromeHeadlessCustom",
+    "build:design": "ng build @mafo5/ng-design",
     "lint:ref": "ng lint @mafo5/ng-ref",
     "test:ref": "ng test @mafo5/ng-ref --watch=false",
     "test:ref:ci": "ng test @mafo5/ng-ref --watch=false --browsers=ChromeHeadlessCustom",
     "build:ref": "ng build @mafo5/ng-ref",
+    "build:libs": "npm run build:ref && npm run build:design",
     "dev:ref": "ng test @mafo5/ng-ref",
     "e2e": "ng e2e",
-    "deploy": "npm run build:design && ng deploy --base-href=/exampleAppAngular/"
+    "deploy": "npm run build:libs && ng deploy --base-href=/exampleAppAngular/"
   },
   "private": true,
   "dependencies": {

@@ -128,46 +128,6 @@
         }
       }
     },
-    "@example-app-angular/design": {
-      "projectType": "library",
-      "root": "projects/example-app-angular/design",
-      "sourceRoot": "projects/example-app-angular/design/src",
-      "prefix": "design",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/example-app-angular/design/tsconfig.lib.json",
-            "project": "projects/example-app-angular/design/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/example-app-angular/design/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/example-app-angular/design/src/test.ts",
-            "tsConfig": "projects/example-app-angular/design/tsconfig.spec.json",
-            "karmaConfig": "projects/example-app-angular/design/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/example-app-angular/design/tsconfig.lib.json",
-              "projects/example-app-angular/design/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "@mafo5/ng-design": {
       "projectType": "library",
       "root": "projects/mafo5/ng-design",

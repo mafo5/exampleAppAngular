@@ -19,10 +19,6 @@
       "dom"
     ],
     "paths": {
-      "@example-app-angular/design": [
-        "dist/example-app-angular/design/example-app-angular-design",
-        "dist/example-app-angular/design"
-      ],
       "@mafo5/ng-design": [
         "dist/mafo5/ng-design/mafo-ng-design",
         "dist/mafo5/ng-design"
