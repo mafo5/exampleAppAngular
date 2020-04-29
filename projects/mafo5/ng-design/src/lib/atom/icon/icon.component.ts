@@ -3,7 +3,7 @@ import { ChangeDetectorRef, Component, ElementRef, Input, OnChanges, SimpleChang
 import { iconMap } from '../../../assets/atom/icon';
 
 @Component({
-  selector: 'design-icon',
+  selector: 'mafo5-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })

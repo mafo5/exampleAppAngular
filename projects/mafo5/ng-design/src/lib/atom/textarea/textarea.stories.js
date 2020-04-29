@@ -33,8 +33,8 @@ storiesOf('Atom/Textarea', module)
   )
   .add('simple', () => ({
     template: `
-      <design-textarea></design-textarea>
-      <design-textarea placeholder="with a placeholder"></design-textarea>
-      <design-textarea value="with a predefined value"></design-textarea>
+      <mafo5-textarea></mafo5-textarea>
+      <mafo5-textarea placeholder="with a placeholder"></mafo5-textarea>
+      <mafo5-textarea value="with a predefined value"></mafo5-textarea>
     `,
     }))

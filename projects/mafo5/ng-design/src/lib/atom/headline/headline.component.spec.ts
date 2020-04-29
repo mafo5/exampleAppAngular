@@ -5,7 +5,7 @@ import * as __ from 'hamjest';
 import { HeadlineComponent } from './headline.component';
 
 @Component({
-  template: '<design-headline>TEST CONTENT</design-headline>'
+  template: '<mafo5-headline>TEST CONTENT</mafo5-headline>'
 })
 class TestWrapperComponent {}
 

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'design-input',
+  selector: 'mafo5-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })

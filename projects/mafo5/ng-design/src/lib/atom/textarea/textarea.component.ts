@@ -4,7 +4,7 @@ import { ControlValueAccessor } from '@angular/forms';
 const DEFAULT_EMPTY = '';
 
 @Component({
-  selector: 'design-textarea',
+  selector: 'mafo5-textarea',
   templateUrl: './textarea.component.html',
   styleUrls: ['./textarea.component.scss']
 })

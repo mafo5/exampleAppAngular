@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { ListComponent } from './list.component';
 
 @Component({
-  selector: 'app-list',
+  selector: 'mafo5-list',
   template: `TEST_LIST {{list}}
     <ng-container [ngTemplateOutlet]="template"
                   [ngTemplateOutletContext]="{$implicit: list && list.length && list[0] !== undefined && list[0] || 0 }"></ng-container>

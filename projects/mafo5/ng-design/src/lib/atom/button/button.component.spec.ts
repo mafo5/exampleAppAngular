@@ -5,7 +5,7 @@ import * as __ from 'hamjest';
 import { ButtonComponent } from './button.component';
 
 @Component({
-  template: '<design-button>TEST CONTENT</design-button>'
+  template: '<mafo5-button>TEST CONTENT</mafo5-button>'
 })
 class TestWrapperComponent {}
 

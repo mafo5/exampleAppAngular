@@ -33,35 +33,35 @@ storiesOf('Atom/List', module)
   )
   .add('simple', () => ({
     template: `
-      <design-list [list]="[1,2,3,4,5]"></design-list>
+      <mafo5-list [list]="[1,2,3,4,5]"></mafo5-list>
     `,
     }))
   .add('horizontal', () => ({
     template: `
-      <design-list horizontal [list]="[1,2,3,4,5]"></design-list>
+      <mafo5-list horizontal [list]="[1,2,3,4,5]"></mafo5-list>
     `,
     }))
   .add('horizontal Stack', () => ({
     template: `
-      <design-list horizontalStack [list]="[1,2,3,4,5]"></design-list>
+      <mafo5-list horizontalStack [list]="[1,2,3,4,5]"></mafo5-list>
     `,
     }))
   .add('with template', () => ({
     template: `
-      <design-list [list]="[1,2,3,4,5]" [template]="entry"><ng-template #entry let-item><div class="test__block">{{item|json}}</div></ng-template></design-list>
+      <mafo5-list [list]="[1,2,3,4,5]" [template]="entry"><ng-template #entry let-item><div class="test__block">{{item|json}}</div></ng-template></mafo5-list>
     `,
     styles,
   }))
   .add('horizontal with template', () => ({
     template: `
-      <design-list horizontal [list]="[1,2,3,4,5]" [template]="entry"><ng-template #entry let-item><div class="test__block">{{item|json}}</div></ng-template></design-list>
+      <mafo5-list horizontal [list]="[1,2,3,4,5]" [template]="entry"><ng-template #entry let-item><div class="test__block">{{item|json}}</div></ng-template></mafo5-list>
     `,
     styles,
   }))
   .add('horizontal Stack with template', () => ({
     template: `
       <div class="area area--fixed">
-        <design-list horizontalStack [list]="list" [template]="entry"><ng-template #entry let-item let-index><div class="test__block" [style.height]="item">{{index|json}}</div></ng-template></design-list>
+        <mafo5-list horizontalStack [list]="list" [template]="entry"><ng-template #entry let-item let-index><div class="test__block" [style.height]="item">{{index|json}}</div></ng-template></mafo5-list>
       </div>
     `,
     styles,

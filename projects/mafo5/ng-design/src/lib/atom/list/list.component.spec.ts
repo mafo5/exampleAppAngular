@@ -5,7 +5,7 @@ import * as __ from 'hamjest';
 import { ListComponent } from './list.component';
 
 @Component({
-  template: '<app-list [list]="list"></app-list>'
+  template: '<mafo5-list [list]="list"></mafo5-list>'
 })
 class TestNoTemplateWrapperComponent {
   list: any[];
@@ -13,9 +13,9 @@ class TestNoTemplateWrapperComponent {
 
 @Component({
   template: `
-  <app-list [list]="list" [template]="entry">
+  <mafo5-list [list]="list" [template]="entry">
     <ng-template #entry let-item>CONTENT VALUE {{item}}</ng-template>
-  </app-list>
+  </mafo5-list>
   `
 })
 class TestTemplateWrapperComponent {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'design-label',
+  selector: 'mafo5-label',
   templateUrl: './label.component.html',
   styleUrls: ['./label.component.scss']
 })

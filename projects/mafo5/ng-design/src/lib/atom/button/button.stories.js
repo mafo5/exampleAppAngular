@@ -9,15 +9,15 @@ storiesOf('Atom/Button', module)
   )
   .add('colors', () => ({
     template: `
-      <design-button>Normal</design-button>
-      <design-button class="primary">Primary</design-button>
-      <design-button class="secondary">Secondary</design-button>
+      <mafo5-button>Normal</mafo5-button>
+      <mafo5-button class="primary">Primary</mafo5-button>
+      <mafo5-button class="secondary">Secondary</mafo5-button>
     `,
   }))
   .add('short', () => ({
     template: `
-      <design-button class="short">Normal</design-button>
-      <design-button class="primary short">Primary</design-button>
-      <design-button class="secondary short">Secondary</design-button>
+      <mafo5-button class="short">Normal</mafo5-button>
+      <mafo5-button class="primary short">Primary</mafo5-button>
+      <mafo5-button class="secondary short">Secondary</mafo5-button>
     `,
   }))

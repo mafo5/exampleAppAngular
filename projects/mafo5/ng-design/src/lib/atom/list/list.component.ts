@@ -1,7 +1,7 @@
 import { Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'design-list',
+  selector: 'mafo5-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })

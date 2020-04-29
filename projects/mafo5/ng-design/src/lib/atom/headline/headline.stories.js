@@ -9,6 +9,6 @@ storiesOf('Atom/Headline', module)
   )
   .add('simple', () => ({
     template: `
-      <design-headline>Some Headline</design-headline>
+      <mafo5-headline>Some Headline</mafo5-headline>
       `,
     }))

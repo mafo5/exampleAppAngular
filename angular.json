@@ -172,7 +172,7 @@
       "projectType": "library",
       "root": "projects/mafo5/ng-design",
       "sourceRoot": "projects/mafo5/ng-design/src",
-      "prefix": "lib",
+      "prefix": "mafo5",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -212,7 +212,7 @@
       "projectType": "library",
       "root": "projects/mafo5/ng-ref",
       "sourceRoot": "projects/mafo5/ng-ref/src",
-      "prefix": "lib",
+      "prefix": "mafo5",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

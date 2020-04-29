@@ -5,7 +5,7 @@ import * as __ from 'hamjest';
 import { LabelComponent } from './label.component';
 
 @Component({
-  template: '<design-label>TEST CONTENT</design-label>'
+  template: '<mafo5-label>TEST CONTENT</mafo5-label>'
 })
 class TestWrapperComponent {}
 

@@ -9,6 +9,6 @@ storiesOf('Atom/Label', module)
   )
   .add('simple', () => ({
     template: `
-      <design-label>Some Label</design-label>
+      <mafo5-label>Some Label</mafo5-label>
       `,
     }))

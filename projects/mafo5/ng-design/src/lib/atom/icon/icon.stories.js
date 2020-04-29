@@ -11,7 +11,7 @@ storiesOf('Atom/Icon', module)
   .add('all', () => ({
     template: `
       <ng-container *ngFor="let icon of iconMap">
-        <div style="display: inline-block; padding: 10px;"><design-icon [name]="icon"></design-icon> {{icon}}</div>
+        <div style="display: inline-block; padding: 10px;"><mafo5-icon [name]="icon"></mafo5-icon> {{icon}}</div>
       </ng-container>
     `,
     props: {
@@ -21,7 +21,7 @@ storiesOf('Atom/Icon', module)
   .add('with size', () => ({
     template: `
       <ng-container *ngFor="let icon of iconMap">
-        <div style="display: inline-block; padding: 10px;"><design-icon [name]="icon" size="40"></design-icon> {{icon}}</div>
+        <div style="display: inline-block; padding: 10px;"><mafo5-icon [name]="icon" size="40"></mafo5-icon> {{icon}}</div>
       </ng-container>
     `,
     props: {
