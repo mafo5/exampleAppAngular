@@ -1,0 +1,10 @@
+{
+  "name": "@mafo5/ng-ref",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "@angular/common": "^9.1.1",
+    "@angular/core": "^9.1.1",
+    "rxjs": "^6.5.5",
+    "tslib": "^1.10.0"
+  }
+}

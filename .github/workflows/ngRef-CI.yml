@@ -1,4 +1,4 @@
-name: CI Build
+name: '@mafo5/ng-ref CI'
 
 on: [push]
 
@@ -21,6 +21,8 @@ jobs:
     - name: npm install and build
       run: |
         npm ci
-        npm run build
+        npm run lint:ref
+        npm run test:ref:ci
+        npm run build:ref
       env:
         CI: true
