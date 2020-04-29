@@ -1,0 +1,21 @@
+<ng-container *ngIf="list">
+  <ul [class.horizontal-stack]="horizontalStack !== false" [class.horizontal]="horizontal !== false">
+    <ng-container *ngFor="let item of list; let i = index">
+      <li>
+        <p>INPUT {{item|json}} Index: {{index}}</p>
+        <ng-container [ngTemplateOutlet]="template ? withTemplate : withoutTemplate"
+                      [ngTemplateOutletContext]="{item:item, index:i}"></ng-container>
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>
+
+<ng-template #withTemplate let-option let-index>
+  <p>FUCK {{option}} Index: {{index}}</p>
+  <!-- <ng-container [ngTemplateOutlet]="template"
+                [ngTemplateOutletContext]="{'$implicit':option, 'index': index}"></ng-container> -->
+</ng-template>
+
+<ng-template #withoutTemplate let-item>
+  {{item}}
+</ng-template>

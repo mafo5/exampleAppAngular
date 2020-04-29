@@ -1,0 +1,17 @@
+{
+  "name": "@mafo/ng-design",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/angular": "^5.3.18",
+    "babel-loader": "^8.1.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook"
+  }
+}

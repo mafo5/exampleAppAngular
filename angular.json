@@ -168,6 +168,46 @@
         }
       }
     },
+    "@mafo5/ng-design": {
+      "projectType": "library",
+      "root": "projects/mafo5/ng-design",
+      "sourceRoot": "projects/mafo5/ng-design/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mafo5/ng-design/tsconfig.lib.json",
+            "project": "projects/mafo5/ng-design/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mafo5/ng-design/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mafo5/ng-design/src/test.ts",
+            "tsConfig": "projects/mafo5/ng-design/tsconfig.spec.json",
+            "karmaConfig": "projects/mafo5/ng-design/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mafo5/ng-design/tsconfig.lib.json",
+              "projects/mafo5/ng-design/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "@mafo5/ng-ref": {
       "projectType": "library",
       "root": "projects/mafo5/ng-ref",

@@ -1,0 +1,39 @@
+:host {
+  display: inline-block;
+  width: 100%;
+
+  button {
+    min-width: 100%;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #d9dcdd;
+    color: #403f4c;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &.secondary {
+    button {
+      background-color: #403f4c;
+      color: #fff;
+    }
+  }
+
+  &.primary {
+    button {
+      background-color: #ff9505;
+      color: #fff;
+    }
+  }
+
+  &.short {
+    width: unset;
+    button {
+      min-width: unset;
+    }
+  }
+}

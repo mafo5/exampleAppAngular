@@ -23,9 +23,13 @@
         "dist/example-app-angular/design/example-app-angular-design",
         "dist/example-app-angular/design"
       ],
+      "@mafo5/ng-design": [
+        "dist/mafo5/ng-design/mafo-ng-design",
+        "dist/mafo5/ng-design"
+      ],
       "@mafo5/ng-ref": [
-        "dist/mafo/ng-ref/mafo-ng-ref",
-        "dist/mafo/ng-ref"
+        "dist/mafo5/ng-ref/mafo-ng-ref",
+        "dist/mafo5/ng-ref"
       ]
     }
   },

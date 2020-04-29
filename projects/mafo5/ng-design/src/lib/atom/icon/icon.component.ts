@@ -38,7 +38,7 @@ export class IconComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    const size = changes.size.currentValue || 24;
+    const size = (changes.size && changes.size.currentValue) || 24;
     const svg = this.iconMap[ this.uppercamelcase(changes.name.currentValue) ] || '';
 
     if (!svg) {
