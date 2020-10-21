@@ -1,8 +1,10 @@
 :host {
-  display: inline-block;
+  display: grid;
   width: 100%;
 
   button {
+    display: grid;
+    align-items: center;
     min-width: 100%;
     padding: 8px 16px;
     border-radius: 4px;
@@ -14,6 +16,13 @@
     border: none;
     text-transform: uppercase;
     cursor: pointer;
+  }
+
+  &.white {
+    button {
+      background-color: #fff;
+      color: rgb(64, 63, 76);
+    }
   }
 
   &.secondary {

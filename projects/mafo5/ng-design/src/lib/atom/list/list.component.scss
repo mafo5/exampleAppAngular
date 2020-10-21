@@ -1,3 +1,5 @@
+// @import '../../variables.scss';
+
 :host {
   display: block;
 }
@@ -17,13 +19,14 @@ ul {
 
   &.horizontal-stack {
     display: block;
-    column-count: 4;
-    column-gap: 0;
+    column-count: auto;
     column-rule-width: 0;
+    column-width: 230px;
 
     & > li {
-      display: inline-block;
+      display: block;
       flex-grow: unset;
+      break-inside: avoid-column;
     }
   }
 
