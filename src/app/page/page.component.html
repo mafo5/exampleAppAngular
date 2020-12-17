@@ -1,10 +1,12 @@
-<aside>
-  <header>
-
-  </header>
-  <app-navigation></app-navigation>
-</aside>
-<main>
-  <h1>Main Content</h1>
-  <router-outlet></router-outlet>
-</main>
+<a *ngIf="back !== null" class="breadcumb" [routerLink]="'..'">{{ back === '' ? '< Back' : back}}</a>
+<ng-container *ngIf="title">
+  <h1 *ngIf="title">{{title}}</h1>
+  <div class="action__list">
+    <ng-container *ngFor="let action of actionList">
+      <mafo5-button class="primary" [routerLink]="action.link">{{action.label}}</mafo5-button>
+    </ng-container>
+  </div>
+</ng-container>
+<div class="content">
+  <ng-content></ng-content>
+</div>

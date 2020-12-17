@@ -1,47 +1,43 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ButtonComponent } from '@mafo5/ng-design';
 import * as __ from 'hamjest';
 
 import { PageComponent } from './page.component';
-import { Router } from '@angular/router';
-
-@Component({ template: 'TEST CONTENT' })
-class TestComponent {}
 
 @Component({
-  selector: 'app-navigation',
-  template: 'TEST_NAVIGATION'
+  template: '<app-page title="Test Title">TEST CONTENT</app-page>'
 })
-class TestNavigationComponent {}
+class TestWrapperComponent {}
+
+@Component({
+  // tslint:disable-next-line: component-selector
+  selector: 'mafo5-button',
+  template: 'TEST_BUTTON <ng-content></ng-content>'
+})
+class TestButtonComponent extends ButtonComponent {}
 
 describe('PageComponent', () => {
-  let fixture: ComponentFixture<PageComponent>;
-  let component: PageComponent;
+  let fixture: ComponentFixture<TestWrapperComponent>;
+  let component: TestWrapperComponent;
   let compiled: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule.withRoutes([
-          { path: '', component: TestComponent },
-        ])
+        RouterTestingModule,
       ],
       declarations: [
         PageComponent,
-        TestComponent,
-        TestNavigationComponent,
+        TestWrapperComponent,
+        TestButtonComponent,
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PageComponent);
+    fixture = TestBed.createComponent(TestWrapperComponent);
     component = fixture.debugElement.componentInstance;
     compiled = fixture.debugElement.nativeElement;
-
-    const router = TestBed.inject(Router);
-    fixture.ngZone.run(() => {
-      router.initialNavigation();
-    });
     fixture.detectChanges();
   }));
 
@@ -50,18 +46,13 @@ describe('PageComponent', () => {
     __.assertThat(component, __.is(__.truthy()));
   });
 
-  it('should render routing content', () => {
+  it('should render content', () => {
 
     __.assertThat(compiled, __.hasProperty('textContent', __.containsString('TEST CONTENT')));
   });
 
-  it('should render navigation', () => {
+  it('should render title', () => {
 
-    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('TEST_NAVIGATION')));
-  });
-
-  it('should render main content', () => {
-
-    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('Main Content')));
+    __.assertThat(compiled, __.hasProperty('textContent', __.containsString('Test Title')));
   });
 });

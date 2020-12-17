@@ -1,0 +1,50 @@
+mafo5-list {
+  max-width: 43.75rem;
+}
+
+article {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20px auto;
+  background-color: white;
+  border-radius: 0.3125rem;
+  padding: 1.25rem 1rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 16px 0 #d9dcdd;
+    -webkit-transform: translate(0px, -1px);
+    -ms-transform: translate(0px, -1px);
+    transform: translate(0px, -1px);
+  }
+
+  .title {
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .content {
+    grid-gap: 1rem;
+    transition: 0.5s;
+    overflow: hidden;
+    height: 0;
+  }
+
+  &.open {
+    grid-gap: 0.5rem;
+
+    .title {
+      color: rgb(255, 149, 5);
+    }
+    .content {
+      height: 100%;
+    }
+  }
+}

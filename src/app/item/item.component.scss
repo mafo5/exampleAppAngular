@@ -1,0 +1,22 @@
+:host {
+  display: inline-block;
+  background-color: #fff;
+  color: #403f4c;
+  border-radius: 4px;
+  padding: 10px 12px 16px;
+  font-size: 14px;
+  line-height: 20px;
+
+  &.inverted {
+    background-color: #4C5760;
+    color: #ffffff;
+  }
+}
+
+label {
+  font-weight: 200;
+}
+
+div {
+  font-weight: bold;
+}

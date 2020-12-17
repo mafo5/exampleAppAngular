@@ -1,0 +1,31 @@
+app-card {
+  background-image: url(https://global-uploads.webflow.com/5e11f6f45aa398e84a03cef4/5e20ddde84fda64e3c832f3f_Profile-Deco-2.svg);
+  background-position-x: 110%;
+  background-position-y: -15%;
+  background-repeat: no-repeat;
+  background-size: 24%;
+}
+
+.teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 14px;
+
+  ::ng-deep a {
+    text-decoration: underline;
+  }
+}
+
+.action {
+  margin-left: 16px;
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

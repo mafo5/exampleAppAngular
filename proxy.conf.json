@@ -1,0 +1,11 @@
+{
+  "/webflow/*": {
+    "target": "https://api.webflow.com",
+    "secure": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/webflow": ""
+    },
+    "changeOrigin": true
+  }
+}

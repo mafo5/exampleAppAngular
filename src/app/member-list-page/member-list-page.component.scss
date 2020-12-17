@@ -1,0 +1,44 @@
+article {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 234px 20px 24px 20px auto;
+    grid-column-gap: 0.5rem;
+    background-color: white;
+    border-radius: 0.3125rem;
+    padding: 1.25rem 1rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    &:hover {
+      box-shadow: 0 0 6px 0 #d9dcdd;
+      -webkit-transform: translate(0px, -1px);
+      -ms-transform: translate(0px, -1px);
+      transform: translate(0px, -1px);
+      cursor: pointer;
+    }
+
+    img {
+      width: 192px;
+      height: 230px;
+      border-radius: 0.125rem;
+      background-image: url(https://global-uploads.webflow.com/5e11f6f45aa398e84a03cef4/5e2b6642c79e6412554583e1_Placeholder-Image.png);
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      object-fit: cover;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+
+    .experience {
+      font-weight: 400;
+      color: #869ca0
+    }
+
+    .label {
+      font-weight: 600;
+    }
+}

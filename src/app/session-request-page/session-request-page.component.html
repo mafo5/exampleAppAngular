@@ -1,0 +1,34 @@
+<app-page title="Request a Session" back="Cancel">
+  <div class="content">
+    <p>Our sessions are structured to discuss real life challenges. Choose a topic that you currently need help with. Our process will help you and your peer advice eachother.</p>
+    <a [routerLink]="'/session-structure'">Session structure</a>
+    <mafo5-label>The Topic you want to discuss</mafo5-label>
+    <mafo5-textarea placeholder="Enter your current challenge"></mafo5-textarea>
+    <mafo5-label>Date</mafo5-label>
+    <p>Suggest at least 3 Time Slots for your session. Please keep in mind, that mentoring should happen regularly, so you may want to select dates you can make regularly.</p>
+    <div class="tab__container">
+      <div class="tab__header">
+        <div [class.selected]="selectedDay === 'MON'" (click)="selectedDay = 'MON'">MON</div>
+        <div [class.selected]="selectedDay === 'TUE'" (click)="selectedDay = 'TUE'">TUE</div>
+        <div [class.selected]="selectedDay === 'WED'" (click)="selectedDay = 'WED'">WED</div>
+        <div [class.selected]="selectedDay === 'THU'" (click)="selectedDay = 'THU'">THU</div>
+        <div [class.selected]="selectedDay === 'FRI'" (click)="selectedDay = 'FRI'">FRI</div>
+        <div [class.selected]="selectedDay === 'SAT'" (click)="selectedDay = 'SAT'">SAT</div>
+        <div [class.selected]="selectedDay === 'SUN'" (click)="selectedDay = 'SUN'">SUN</div>
+      </div>
+      <div class="tab__content">
+        <mafo5-label>Monday</mafo5-label>
+        <mafo5-list [list]="[{ id: 1, day: '2020-04-19', hour: '02:00'}, { id: 2, day: '2020-04-19', hour: '03:00'}]"
+                  [template]="slotEntry" horizontal>
+          <ng-template #slotEntry let-slot>
+            <app-item [class.inverted]="selectedSlot === slot.id"
+                      [title]="slot.day"
+                      [value]="slot.hour"
+                      (click)="selectedSlot = slot.id"></app-item>
+          </ng-template>
+        </mafo5-list>
+      </div>
+      <mafo5-button class="primary short">Submit</mafo5-button>
+    </div>
+  </div>
+</app-page>

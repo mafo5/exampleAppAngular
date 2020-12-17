@@ -1,0 +1,35 @@
+<app-page title="Your Session with Yuri" back>
+  <section>
+    <a [routerLink]="'/members/1'">
+      <article class="user">
+        <img alt="profile picture" src="https://global-uploads.webflow.com/5e11f6f45aa398847203cef7/5e4acad116915ba10fe1643d_565e7e5a-e0bf-4306-97c8-77cf45a3602e.png">
+        <div class="name">
+          <div class="firstname">Yuri</div>
+          <div class="familyname">Myers</div>
+        </div>
+        <div class="title">Lead UX Designer</div>
+        <div class="timezone">GMT+07:00</div>
+      </article>
+    </a>
+    <article class="session">
+      <mafo5-label>Topic</mafo5-label>
+      <p>Decline Test 2</p>
+      <mafo5-label>Skills</mafo5-label>
+      <p>Analytics, Consulting, Content Strategy, Design Thinking, Interaction Design</p>
+    </article>
+    <mafo5-button class="accept secondary">Accept Session</mafo5-button>
+    <mafo5-button class="decline">Decline Session</mafo5-button>
+    <article class="note">
+      <mafo5-label>Choose a Date</mafo5-label>
+      <label for="date1" class="selection__entry"><input type="radio" name="date1" hidden>
+        <p class="weekday">Monday</p>
+        <p class="time">2020-03-30 05:00</p>
+      </label>
+    </article>
+    <article class="note">
+      <mafo5-label>Add a Personal Note</mafo5-label>
+      <mafo5-textarea placeholder="Your message to your peer."></mafo5-textarea>
+    </article>
+    <mafo5-button type="button" class="primary">Submit Selection</mafo5-button>
+  </section>
+</app-page>

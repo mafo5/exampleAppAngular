@@ -1,0 +1,16 @@
+<app-page title="Frequently Asked Questions">
+  <mafo5-list [list]="[1, 2, 3, 4, 5, 6, 7]" [template]="entry">
+    <ng-template #entry let-item>
+      <article [class.open]="isOpen(item)">
+        <div class="title" (click)="toggle(item)">What is the difference between a coach and a mentor?</div>
+        <div class="content" >
+          <div>
+            <p>While coaching is focused more on task based issues and skill improvement, mentoring is a relationship based approach, that with focusses on guidance and orientation.</p>
+            <p>Therefore a.coach should have clear knowledge of the skills you are trying to attain, while a mentor doesn't necessarily have to be in your field at all.</p>
+            <p>Mentors should be more of a fit in terms of values and personality than hard skills.</p>
+          </div>
+        </div>
+      </article>
+    </ng-template>
+  </mafo5-list>
+</app-page>

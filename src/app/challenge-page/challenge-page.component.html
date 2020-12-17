@@ -1,0 +1,4 @@
+<app-page [title]="title | async" back>
+  <div class="subline">{{userName | async}} at {{publishedOn | async | date}}</div>
+  <p>{{content | async}}</p>
+</app-page>

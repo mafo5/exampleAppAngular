@@ -1,0 +1,41 @@
+app-page {
+  max-width: 43.75rem;
+}
+
+.content {
+  display: grid;
+  justify-items: stretch;
+  align-items: start;
+  grid-gap: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+mafo5-label, mafo5-button {
+  margin-top: 8px;
+}
+
+.tab {
+  &__header {
+    margin: 0 0 16px;
+
+    div {
+      display: inline-block;
+      background-color: #dddddd;
+      padding: 9px 30px;
+      cursor: pointer;
+
+      &.selected {
+        background-color: #C8C8C8;
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    grid-gap: 16px;
+  }
+}

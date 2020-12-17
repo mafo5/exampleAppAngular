@@ -1,0 +1,42 @@
+article {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 0.5rem;
+  background-color: white;
+  border-radius: 0.3125rem;
+  padding: 1.25rem 1rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #403f4c;
+
+  &:hover {
+    box-shadow: 0 0 6px 0 #d9dcdd;
+    -webkit-transform: translate(0px, -1px);
+    -ms-transform: translate(0px, -1px);
+    transform: translate(0px, -1px);
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .author {
+    color: #869ca0;
+  }
+}
+
+mafo5-list ::ng-deep ul {
+  column-gap: 16px;
+}
+
+app-info {
+  margin-bottom: 32px;
+
+  a {
+    text-decoration: underline;
+  }
+}

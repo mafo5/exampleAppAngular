@@ -1,0 +1,51 @@
+app-page {
+  max-width: 43.75rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 28px 44px 20px 28px 20px 24px 43px 33px;
+  grid-column-gap: 14px;
+  margin-bottom: 20px;
+
+  img {
+    grid-row: 1 / 9;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.125rem;
+    background-image: url(https://global-uploads.webflow.com/5e11f6f45aa398847203cef7/5e4acad116915ba10fe1643d_565e7e5a-e0bf-4306-97c8-77cf45a3602e.png);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  .firstname, .lastname {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .experience {
+    font-weight: 400;
+    color: #869ca0
+  }
+}
+
+.content {
+  display: grid;
+  justify-items: start;
+  align-items: start;
+  grid-gap: 10px;
+  font-size: 14px;
+  line-height: 20px;
+
+  p, app-info {
+    margin-bottom: 22px;
+  }
+}

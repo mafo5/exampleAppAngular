@@ -1,0 +1,13 @@
+mafo5-list {
+  max-width: 43.75rem;
+}
+
+app-session-item {
+  &:hover {
+    box-shadow: 0 0 6px 0 #d9dcdd;
+    -webkit-transform: translate(0px, -1px);
+    -ms-transform: translate(0px, -1px);
+    transform: translate(0px, -1px);
+    cursor: pointer;
+  }
+}

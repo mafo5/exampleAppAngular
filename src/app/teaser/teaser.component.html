@@ -1,0 +1,11 @@
+<app-card class="dark">
+  <div class="teaser">
+    <mafo5-headline>{{title}}</mafo5-headline>
+    <div class="action__list">
+      <ng-container *ngFor="let action of actionList">
+        <mafo5-button class="action short" [ngClass]="action.type || 'white'" [routerLink]="action.link">{{action.label}}</mafo5-button>
+      </ng-container>
+    </div>
+    <p><ng-content></ng-content></p>
+  </div>
+</app-card>

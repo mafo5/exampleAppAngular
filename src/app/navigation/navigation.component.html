@@ -1,9 +1,11 @@
 <nav>
   <ul>
     <ng-container *ngFor="let navigation of navigationList">
-      <li [routerLink]="navigation.path" routerLinkActive="active">
-        <design-icon size="20" [name]="navigation.icon" *ngIf="navigation.icon"></design-icon>
-        {{navigation.label}}
+      <li>
+        <a [routerLink]="navigation.path" routerLinkActive="active" [attr.data-ms-logout]="navigation.logout">
+          <mafo5-icon size="20" [name]="navigation.icon" *ngIf="navigation.icon"></mafo5-icon>
+          {{navigation.label}}
+        </a>
       </li>
     </ng-container>
   </ul>

@@ -1,0 +1,34 @@
+form {
+  display: grid;
+  grid-gap: 1rem;
+  max-width: 300px;
+  margin: auto;
+  color: #403f4c;
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  label {
+    text-transform: uppercase;
+  }
+
+  input {
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #d9dcdd;
+    border-radius: 4px;
+    font-family: inherit;
+
+    &::placeholder {
+      color: rgba(50, 52, 58, 0.4);
+    }
+  }
+}

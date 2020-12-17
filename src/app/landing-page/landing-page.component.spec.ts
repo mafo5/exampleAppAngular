@@ -1,12 +1,12 @@
+import { Component, Input } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import * as __ from 'hamjest';
 
 import { LandingPageComponent } from './landing-page.component';
-import { Component, Input } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line: component-selector
-  selector: 'design-icon',
+  selector: 'mafo5-icon',
   template: 'TEST_ICON {{value|json}}',
 })
 class TestIconComponent {

@@ -1,0 +1,44 @@
+<app-page title="Dashboard">
+  <div class="dashboard dashboard--teaser">
+    <app-teaser [title]="'Welcome ' + (firstname|async) + '!'"
+                [actionList]="[{ label: 'Update Profile', type: 'primary', link: '/members/me/update'}, { label: 'View Profile', link: '/members/me'}]"
+                class="teaser">
+      This Dashboard gives you an overview of all important things at PEERS. We'll also try to keep you updated. If you are missing any information, please feel free to reavh out to us as <a href="#">contact@ux-membership.com</a>
+    </app-teaser>
+    <app-card class="additional">
+      <div class="state">
+        <app-circle>5</app-circle>
+        <div class="subtext">Sesssions</div>
+        <div class="title">Scheduled</div>
+      </div>
+    </app-card>
+    <app-card class="additional">
+      <div class="state">
+        <app-circle>3</app-circle>
+        <div class="subtext">Sesssions</div>
+        <div class="title">Requested</div>
+      </div>
+    </app-card>
+    <app-card class="additional">
+      <div class="state">
+        <app-circle>25</app-circle>
+        <div class="subtext">Sesssions</div>
+        <div class="title">Finshed</div>
+      </div>
+    </app-card>
+    <app-card class="main">
+      <mafo5-headline>Upcoming Sessions</mafo5-headline>
+      <app-session-item></app-session-item>
+    </app-card>
+    <app-card class="additional">
+      <mafo5-headline>Time Slots</mafo5-headline>
+    </app-card>
+    <app-card class="main">
+      <mafo5-headline>Recent Challenges</mafo5-headline>
+    </app-card>
+    <app-card class="additional">
+      <mafo5-headline>Recent Stories</mafo5-headline>
+      Coming soon
+    </app-card>
+  </div>
+</app-page>

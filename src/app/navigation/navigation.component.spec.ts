@@ -18,7 +18,7 @@ class TestWrapperComponent {}
 
 @Component({
   // tslint:disable-next-line: component-selector
-  selector: 'design-icon',
+  selector: 'mafo5-icon',
   template: 'TEST_ICON {{name | json}} '
 })
 class TestIconComponent {
@@ -68,18 +68,18 @@ describe('NavigationComponent', () => {
     __.assertThat(nodeList, __.contains(
       __.allOf(
         __.hasProperty('innerText', __.is('Without Icon')),
-        __.hasProperty('outerHTML', __.containsString('router-link="withoutIcon"'))
+        __.hasProperty('outerHTML', __.containsString('router-link="/,withoutIcon"'))
       ),
       __.allOf(
         __.hasProperty('innerText', __.is('TEST_ICON "only"')),
-        __.hasProperty('outerHTML', __.containsString('router-link="onlyIcon"'))
+        __.hasProperty('outerHTML', __.containsString('router-link="/,onlyIcon"'))
       ),
       __.allOf(
         __.hasProperty('innerText', __.allOf(
           __.containsString('TEST_ICON "full"'),
           __.containsString('With Icon and Label'),
         )),
-        __.hasProperty('outerHTML', __.containsString('router-link="full"'))
+        __.hasProperty('outerHTML', __.containsString('router-link="/,full"'))
       ),
     ));
   });

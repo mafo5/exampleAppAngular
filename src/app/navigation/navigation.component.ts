@@ -5,6 +5,7 @@ interface Navigation {
   label?: string;
   icon?: string;
   path: string[];
+  logout?: boolean;
 }
 
 @Component({
@@ -19,10 +20,13 @@ export class NavigationComponent implements OnInit {
   constructor(private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.navigationList = this.activeRoute.routeConfig.children.map((child): Navigation => ({
-      path: [child.path],
-      label: child.data && child.data.label,
-      icon: child.data && child.data.icon,
-    }));
+    this.navigationList = this.activeRoute.routeConfig.children
+      .map((child): Navigation => ({
+        path: ['/', child.path],
+        label: child.data && child.data.label,
+        icon: child.data && child.data.icon,
+        logout: child.data && !!child.data.logout,
+      }))
+      .filter((child) => !!child.label || !!child.icon);
   }
 }

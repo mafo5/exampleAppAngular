@@ -1,0 +1,9 @@
+<app-page title="Session">
+  <mafo5-list [list]="[1,1]" [template]="entry">
+    <ng-template #entry let-item>
+      <a [routerLink]="item">
+        <app-session-item></app-session-item>
+      </a>
+    </ng-template>
+  </mafo5-list>
+</app-page>
