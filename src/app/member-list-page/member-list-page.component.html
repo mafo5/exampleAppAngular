@@ -1,15 +1,17 @@
 <app-page title="Member Directory">
-  <mafo5-list [list]="(list | async).items" [template]="entry" horizontalStack>
-    <ng-template #entry let-item>
-      <a [routerLink]="item._id">
-        <article>
-          <img alt="profile picture" [src]="item.portrait?.url || 'https://global-uploads.webflow.com/5e11f6f45aa398e84a03cef4/5e2b6642c79e6412554583e1_Placeholder-Image.png'">
-          <div class="title">{{item.position}}</div>
-          <div class="experience">{{item['years-of-experience']}} years of experience</div>
-          <div class="label">What I can teach</div>
-          <div class="text">{{item['what-i-can-share']}}</div>
-        </article>
-      </a>
-    </ng-template>
-  </mafo5-list>
+  <ng-container *ngIf="list | async; let listResult">
+    <mafo5-list [list]="listResult.items" [template]="entry" horizontalStack>
+      <ng-template #entry let-item>
+        <a [routerLink]="item._id">
+          <article>
+            <img alt="profile picture" [src]="item.portrait?.url || 'https://global-uploads.webflow.com/5e11f6f45aa398e84a03cef4/5e2b6642c79e6412554583e1_Placeholder-Image.png'">
+            <div class="title">{{item.position}}</div>
+            <div class="experience">{{item['years-of-experience']}} years of experience</div>
+            <div class="label">What I can teach</div>
+            <div class="text">{{item['what-i-can-share']}}</div>
+          </article>
+        </a>
+      </ng-template>
+    </mafo5-list>
+  </ng-container>
 </app-page>

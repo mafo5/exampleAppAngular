@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import * as __ from 'hamjest';
@@ -14,6 +14,15 @@ class TestComponent {}
   template: 'TEST_NAVIGATION'
 })
 class TestNavigationComponent {}
+
+@Component({
+  // tslint:disable-next-line: component-selector
+  selector: 'mafo5-icon',
+  template: 'TEST_ICON {{value|json}}',
+})
+class TestIconComponent {
+  @Input() value: any;
+}
 
 describe('SiteComponent', () => {
   let fixture: ComponentFixture<SiteComponent>;
@@ -31,6 +40,7 @@ describe('SiteComponent', () => {
         SiteComponent,
         TestComponent,
         TestNavigationComponent,
+        TestIconComponent,
       ],
     }).compileComponents();
 

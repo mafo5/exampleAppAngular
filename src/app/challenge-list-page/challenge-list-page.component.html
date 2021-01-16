@@ -2,15 +2,17 @@
   <app-info>
     Challenges are current issues peer member face & that they would like to discuss with others. A little like the reason why you want a mentor. You can pick a challenge that you feel comfortable helping with and use it as a starting point for your peer mentoring relationship. Challenges are key to a great session. <a routerlink="/session-structure">Find out how sessions work</a>
   </app-info>
-  <mafo5-list [list]="(challengeList | async).items" [template]="entry" horizontalStack>
-    <ng-template #entry let-item>
-      <a class="" [routerLink]="item._id">
-        <article>
-          <div class="title">{{item.topic}}</div>
-          <div class="text">{{item.text}}</div>
-          <div class="author">{{item['member-name']}}</div>
-        </article>
-      </a>
-    </ng-template>
-  </mafo5-list>
+  <ng-container *ngIf="challengeList | async; let list">
+    <mafo5-list [list]="list.items" [template]="entry" horizontalStack>
+      <ng-template #entry let-item>
+        <a class="" [routerLink]="item._id">
+          <article>
+            <div class="title">{{item.topic}}</div>
+            <div class="text">{{item.text}}</div>
+            <div class="author">{{item['member-name']}}</div>
+          </article>
+        </a>
+      </ng-template>
+    </mafo5-list>
+  </ng-container>
 </app-page>

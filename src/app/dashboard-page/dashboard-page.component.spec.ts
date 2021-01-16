@@ -1,6 +1,16 @@
+import { HeadlineComponent } from '@mafo5/ng-design';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { DashboardPageComponent } from './dashboard-page.component';
+import { Component } from '@angular/core';
+
+@Component({
+  // tslint:disable-next-line: component-selector
+  selector: 'mafo5-headline',
+  template: 'TEST_HEADLINE <ng-content></ng-content>'
+})
+class TestHeadlineComponent extends HeadlineComponent {}
 
 describe('DashboardPageComponent', () => {
   let component: DashboardPageComponent;
@@ -8,7 +18,13 @@ describe('DashboardPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardPageComponent ]
+      imports: [
+        RouterTestingModule,
+      ],
+      declarations: [
+        DashboardPageComponent,
+        TestHeadlineComponent,
+      ]
     })
     .compileComponents();
   }));

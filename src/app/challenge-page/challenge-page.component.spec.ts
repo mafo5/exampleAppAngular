@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PageComponent } from '../page/page.component';
 import { ChallengePageComponent } from './challenge-page.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
   selector: 'app-page',
@@ -16,6 +17,9 @@ describe('ChallengePageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+      ],
       declarations: [
         ChallengePageComponent,
         TestPageComponent,
