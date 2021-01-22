@@ -5,7 +5,6 @@ on:
     tags:
       - '*'
 
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -23,5 +22,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        npm install
-        npm run deploy -- --no-silent  --name $GITHUB_ACTOR --email $GITHUB_ACTOR@users.noreply.github.com
+        yarn install
+        yarn deploy -- --no-silent  --name $GITHUB_ACTOR --email $GITHUB_ACTOR@users.noreply.github.com

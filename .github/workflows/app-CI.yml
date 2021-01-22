@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x, 12.x, 14.x]
 
     steps:
     - name: Checkout Code
@@ -18,11 +18,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install and build
+    - name: install and build
       run: |
-        npm ci
-        npm run lint
-        npm run test:ci
-        npm run build
+        yarn install
+        yarn lint
+        yarn test:ci
+        yarn build
       env:
         CI: true
