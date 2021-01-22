@@ -11,23 +11,24 @@ const DEFAULT_EMPTY = '';
 export class TextareaComponent implements ControlValueAccessor {
 
   @Input() placeholder: string;
-  // eslint-disable-next-line @angular-eslint/no-input-rename, @typescript-eslint/naming-convention,no-underscore-dangle,id-blacklist,id-match
+  // eslint-disable-next-line @angular-eslint/no-input-rename,@typescript-eslint/naming-convention,no-underscore-dangle
   @Input('value') _value = '';
-  // eslint-disable-next-line @angular-eslint/no-input-rename, @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match
+  // eslint-disable-next-line @angular-eslint/no-input-rename,@typescript-eslint/naming-convention,no-underscore-dangle
   @Input('disabled') disabled = false;
 
-  private propagateChange: (value?) => string = () => undefined;
-
   get value() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._value;
   }
 
   set value(val) {
+    // eslint-disable-next-line no-underscore-dangle
     this._value = val || DEFAULT_EMPTY;
     this.propagateChange(val);
   }
 
   writeValue(value: string): void {
+    // eslint-disable-next-line no-underscore-dangle
     this._value = value || DEFAULT_EMPTY;
   }
 
@@ -40,4 +41,6 @@ export class TextareaComponent implements ControlValueAccessor {
   setDisabledState?(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }
+
+  private propagateChange: (value?) => string = () => undefined;
 }

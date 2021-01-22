@@ -10,7 +10,7 @@ export interface WebflowApi {
   collections: ({ siteId }: { siteId: string }) => Promise<Collection[]>;
   collection: ({ collectionId }: { collectionId: string }) => Promise<Collection[]>;
   items: ({ collectionId }: { collectionId: string }) => Promise<Page<Item>>;
-  item: ({ collectionId, itemId }: { collectionId: string, itemId: string }) => Promise<Item>;
+  item: ({ collectionId, itemId }: { collectionId: string; itemId: string }) => Promise<Item>;
 }
 
 export interface Site {
@@ -73,24 +73,26 @@ export class WebflowService {
   getCollectionItems(siteId: string, collectionName: string): Observable<Page<Item>> {
     return from(this.api.collections({ siteId }))
     .pipe(
-      map((collectionList) => {
-        return collectionList.find((collection) => collection.name === collectionName);
-      }),
-      switchMap((collection) => {
-        return from(this.api.items({ collectionId: collection._id }));
-      })
+      map((collectionList) =>
+        collectionList.find((collection) => collection.name === collectionName)
+      ),
+      switchMap((collection) =>
+        // eslint-disable-next-line no-underscore-dangle
+        from(this.api.items({ collectionId: collection._id }))
+      )
     );
   }
 
   getCollectionItem(siteId: string, collectionName: string, itemId: string): Observable<Item> {
     return from(this.api.collections({ siteId }))
     .pipe(
-      map((collectionList) => {
-        return collectionList.find((collection) => collection.name === collectionName);
-      }),
-      switchMap((collection) => {
-        return from(this.api.item({ collectionId: collection._id, itemId }));
-      })
+      map((collectionList) =>
+        collectionList.find((collection) => collection.name === collectionName)
+      ),
+      switchMap((collection) =>
+        // eslint-disable-next-line no-underscore-dangle
+        from(this.api.item({ collectionId: collection._id, itemId }))
+      )
     );
   }
 }

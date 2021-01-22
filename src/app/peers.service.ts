@@ -46,13 +46,13 @@ export class PeersService {
 
   getSessionList(): Observable<Page<Session>> {
     return this.memberstack.getMember().pipe(
-      switchMap((member) => {
-        return this.webflow.getCollectionItems('5e11f6f45aa398e84a03cef4', 'Sessions').pipe(
+      switchMap((member) =>
+        this.webflow.getCollectionItems('5e11f6f45aa398e84a03cef4', 'Sessions').pipe(
           map((itemListPage): Page<Session> => {
             const sessionList: Session[] = itemListPage.items
-              .filter((item) => {
-                return item['member-1'] === member.id || item['member-2'] === member.id;
-              })
+              .filter((item) =>
+                item['member-1'] === member.id || item['member-2'] === member.id
+              )
               .map((item): Session => {
                 console.log('item', item);
                 return item as Session;
@@ -65,23 +65,21 @@ export class PeersService {
               limit: itemListPage.limit,
             };
           })
-        );
-      })
+        )
+      )
     );
   }
 
   getChallengeList(): Observable<Page<Challenge>> {
     return this.webflow.getCollectionItems('5e11f6f45aa398e84a03cef4', 'Challenges')
       .pipe(
-        map((list) => {
-          return {
-            items: list.items.map((item) => item as any as Challenge),
-            count: list.count,
-            total: undefined,
-            offset: list.offset,
-            limit: list.limit,
-          };
-        })
+        map((list) => ({
+          items: list.items.map((item) => item as any as Challenge),
+          count: list.count,
+          total: undefined,
+          offset: list.offset,
+          limit: list.limit,
+        }))
       );
   }
 

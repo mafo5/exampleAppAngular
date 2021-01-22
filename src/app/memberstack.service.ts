@@ -4,10 +4,10 @@ import { Observable, Subject } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 
 export interface MemberProfileData {
+  [key: string]: string; // snakecase
   'first-name': string;
   'last-name': string;
   'email': string;
-  [key: string]: string; // snakecase
 }
 export interface MemberMetaData {
   [key: string]: string; // valid json
@@ -19,8 +19,10 @@ export interface Member {
   membership: {
     id: string;
     status: 'active' | 'canceled' | 'past_due' | 'unpaid' | 'trialing';
-    cancel_at_period_end: Date, // unix timestamp
-    current_period_end: string,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    cancel_at_period_end: Date; // unix timestamp
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    current_period_end: string;
   };
   profile: MemberProfileData;
   updateProfile: (profileData: MemberProfileData, withLoader?: boolean) => void;
@@ -38,26 +40,6 @@ export class MemberstackService {
 
   constructor(windowRef: WindowRef) {
     this.memberstack = windowRef.getGlobalObject('MemberStack');
-  }
-
-  private mapMember(input): Member {
-    return {
-      ...input,
-      id: input.id,
-      membership: {
-        ...input.membership,
-        current_period_end:
-          input.membership
-          && input.membership.current_period_end
-          && new Date(input.membership.current_period_end * 1000) || null,
-      },
-      profile: {
-        ...input,
-        'first-name': input['first-name'],
-        'last-name': input['last-name'],
-        email: input.email,
-      }
-    };
   }
 
   getMember(): Observable<Member> {
@@ -78,5 +60,26 @@ export class MemberstackService {
       })
     ).subscribe(() => {});
     return subject;
+  }
+
+  private mapMember(input): Member {
+    return {
+      ...input,
+      id: input.id,
+      membership: {
+        ...input.membership,
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        current_period_end:
+          input.membership
+          && input.membership.current_period_end
+          && new Date(input.membership.current_period_end * 1000) || null,
+      },
+      profile: {
+        ...input,
+        'first-name': input['first-name'],
+        'last-name': input['last-name'],
+        email: input.email,
+      }
+    };
   }
 }

@@ -9,10 +9,6 @@ import { iconMap } from '../../../assets/atom/icon';
 })
 export class IconComponent implements OnChanges {
 
-  private iconMap: {
-    [key: string]: string;
-  };
-
   @Input() name!: string;
   @Input() size!: number;
 
@@ -28,6 +24,10 @@ export class IconComponent implements OnChanges {
     'stroke-width': 2,
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round'
+  };
+
+  private iconMap: {
+    [key: string]: string;
   };
 
   constructor(
