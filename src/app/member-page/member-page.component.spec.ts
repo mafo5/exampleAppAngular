@@ -20,21 +20,21 @@ class TestPageComponent extends PageComponent {}
 class TestInfoComponent extends InfoComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-list',
   template: 'TEST_LIST <ng-content></ng-content>'
 })
 class TestListComponent extends ListComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-button',
   template: 'TEST_BUTTON <ng-content></ng-content>'
 })
 class TestButtonComponent extends ButtonComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-headline',
   template: 'TEST_HEADLINE <ng-content></ng-content>'
 })

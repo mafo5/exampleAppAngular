@@ -9,7 +9,7 @@ import { MemberstackService } from '../memberstack.service';
 import { LoginComponent } from './login.component';
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-button',
   template: 'TEST_BUTTON <ng-content></ng-content>'
 })

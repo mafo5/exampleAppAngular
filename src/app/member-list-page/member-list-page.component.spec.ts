@@ -20,7 +20,7 @@ class TestSessionComponent {}
 class TestPageComponent extends PageComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-list',
   template: 'TEST_LIST <ng-content></ng-content>'
 })

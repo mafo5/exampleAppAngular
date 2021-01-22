@@ -12,7 +12,7 @@ import { PageComponent } from './page.component';
 class TestWrapperComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-button',
   template: 'TEST_BUTTON <ng-content></ng-content>'
 })

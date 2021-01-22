@@ -6,7 +6,7 @@ import { DashboardPageComponent } from './dashboard-page.component';
 import { Component } from '@angular/core';
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-headline',
   template: 'TEST_HEADLINE <ng-content></ng-content>'
 })

@@ -4,7 +4,7 @@ import { WebflowService, Page } from './webflow.service';
 import { switchMap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-// tslint:disable: no-empty-interface
+/* eslint-disable @typescript-eslint/no-empty-interface */
 export interface Session {}
 
 export interface Challenge {

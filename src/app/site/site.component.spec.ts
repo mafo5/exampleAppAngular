@@ -16,7 +16,7 @@ class TestComponent {}
 class TestNavigationComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-icon',
   template: 'TEST_ICON {{value|json}}',
 })

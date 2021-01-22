@@ -12,21 +12,21 @@ import { SessionPageComponent } from './session-page.component';
 })
 class TestPageComponent extends PageComponent {}
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-label',
   template: 'TEST_LABEL <ng-content></ng-content>'
 })
 class TestLabelComponent extends LabelComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-textarea',
   template: 'TEST_TEXTAREA <ng-content></ng-content>'
 })
 class TestTextareaComponent extends TextareaComponent {}
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-button',
   template: 'TEST_BUTTON <ng-content></ng-content>'
 })

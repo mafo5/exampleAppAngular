@@ -11,9 +11,9 @@ const DEFAULT_EMPTY = '';
 export class TextareaComponent implements ControlValueAccessor {
 
   @Input() placeholder: string;
-  // tslint:disable-next-line: no-input-rename variable-name
+  // eslint-disable-next-line @angular-eslint/no-input-rename, @typescript-eslint/naming-convention,no-underscore-dangle,id-blacklist,id-match
   @Input('value') _value = '';
-  // tslint:disable-next-line: no-input-rename variable-name
+  // eslint-disable-next-line @angular-eslint/no-input-rename, @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match
   @Input('disabled') disabled = false;
 
   private propagateChange: (value?) => string = () => undefined;

@@ -46,7 +46,7 @@ describe('Window', () => {
 
     describe('return value', () => {
       beforeEach(() => {
-        // tslint:disable-next-line: no-string-literal
+        // eslint-disable-next-line @typescript-eslint/dot-notation
         delete window['testproperty'];
       });
       it('should be an observable', () => {
@@ -68,7 +68,7 @@ describe('Window', () => {
           const resultList = [];
           sut.getGlobalObject('testproperty').subscribe((result) => resultList.push(result));
 
-          // tslint:disable-next-line: no-string-literal
+          // eslint-disable-next-line @typescript-eslint/dot-notation
           window['testproperty'] = 'something';
 
           __.assertThat(resultList, __.contains('something'));
@@ -77,7 +77,7 @@ describe('Window', () => {
 
       describe('when property does exist', () => {
         it('should resolve with existing value', () => {
-          // tslint:disable-next-line: no-string-literal
+          // eslint-disable-next-line @typescript-eslint/dot-notation
           window['testproperty'] = 'preexsisting value';
 
           const resultList = [];
@@ -90,7 +90,7 @@ describe('Window', () => {
           const resultList = [];
           sut.getGlobalObject('testproperty').subscribe((result) => resultList.push(result));
 
-          // tslint:disable-next-line: no-string-literal
+          // eslint-disable-next-line @typescript-eslint/dot-notation
           window['testproperty'] = 'something';
 
           __.assertThat(resultList, __.contains('something'));

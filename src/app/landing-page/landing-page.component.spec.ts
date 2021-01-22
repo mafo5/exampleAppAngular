@@ -5,7 +5,7 @@ import * as __ from 'hamjest';
 import { LandingPageComponent } from './landing-page.component';
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'mafo5-icon',
   template: 'TEST_ICON {{value|json}}',
 })
