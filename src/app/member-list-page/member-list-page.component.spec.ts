@@ -1,6 +1,6 @@
 import { PeersService } from './../peers.service';
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ListComponent } from '@mafo5/ng-design';
 
@@ -30,7 +30,7 @@ describe('MemberListPageComponent', () => {
   let component: MemberListPageComponent;
   let fixture: ComponentFixture<MemberListPageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

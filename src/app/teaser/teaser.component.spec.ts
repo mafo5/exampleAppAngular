@@ -1,5 +1,5 @@
 import { HeadlineComponent } from '@mafo5/ng-design';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeaserComponent } from './teaser.component';
 import { Component } from '@angular/core';
@@ -15,7 +15,7 @@ describe('TeaserComponent', () => {
   let component: TeaserComponent;
   let fixture: ComponentFixture<TeaserComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         TeaserComponent,

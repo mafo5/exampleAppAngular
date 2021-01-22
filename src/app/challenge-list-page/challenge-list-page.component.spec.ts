@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ListComponent } from '@mafo5/ng-design';
 
@@ -30,7 +30,7 @@ describe('ChallengeListPageComponent', () => {
   let component: ChallengeListPageComponent;
   let fixture: ComponentFixture<ChallengeListPageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

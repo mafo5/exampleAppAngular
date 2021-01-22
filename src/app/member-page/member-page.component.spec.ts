@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ButtonComponent, HeadlineComponent, ListComponent } from '@mafo5/ng-design';
 
@@ -44,7 +44,7 @@ describe('MemberPageComponent', () => {
   let component: MemberPageComponent;
   let fixture: ComponentFixture<MemberPageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

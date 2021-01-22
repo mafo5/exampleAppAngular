@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import * as __ from 'hamjest';
 
 import { TextareaComponent } from './textarea.component';
@@ -9,7 +9,7 @@ xdescribe('TextareaComponent', () => {
   let fixture: ComponentFixture<TextareaComponent>;
   let compiled: HTMLElement;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         TextareaComponent

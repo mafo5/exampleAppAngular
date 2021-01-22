@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import * as __ from 'hamjest';
 
 import { LabelComponent } from './label.component';
@@ -14,7 +14,7 @@ describe('LabelComponent', () => {
   let fixture: ComponentFixture<TestWrapperComponent>;
   let compiled: HTMLElement;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LabelComponent, TestWrapperComponent ]
     })

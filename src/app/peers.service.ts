@@ -4,9 +4,8 @@ import { WebflowService, Page } from './webflow.service';
 import { switchMap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-export interface Session {
-
-}
+// tslint:disable: no-empty-interface
+export interface Session {}
 
 export interface Challenge {
   text: string;

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonComponent, InputComponent, LabelComponent, TextareaComponent } from '@mafo5/ng-design';
 
 import { PageComponent } from '../page/page.component';
@@ -43,7 +43,7 @@ describe('PostChallengePageComponent', () => {
   let component: PostChallengePageComponent;
   let fixture: ComponentFixture<PostChallengePageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         PostChallengePageComponent,

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import * as __ from 'hamjest';
 
 import { ListComponent } from './list.component';
@@ -24,7 +24,7 @@ class TestTemplateWrapperComponent {
 
 xdescribe('ListComponent', () => {
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         ListComponent,
@@ -40,7 +40,7 @@ xdescribe('ListComponent', () => {
     let fixture: ComponentFixture<TestNoTemplateWrapperComponent>;
     let compiled: HTMLElement;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
       fixture = TestBed.createComponent(TestNoTemplateWrapperComponent);
       component = fixture.componentInstance;
       compiled = fixture.nativeElement;
@@ -77,7 +77,7 @@ xdescribe('ListComponent', () => {
     let fixture: ComponentFixture<TestTemplateWrapperComponent>;
     let compiled: HTMLElement;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
       fixture = TestBed.createComponent(TestTemplateWrapperComponent);
       component = fixture.componentInstance;
       compiled = fixture.nativeElement;
